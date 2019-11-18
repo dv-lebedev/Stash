@@ -10,7 +10,7 @@ public static class MathUtils
     /// </summary>
     /// <param name="points"></param>
     /// <returns></returns>
-    public static bool ISSortedByFreq(Point[] points)
+    public static bool IsSortedByFreq(Point[] points)
     {
         if (points == null) throw new ArgumentNullException(nameof(points));
         if (points.Length == 0) throw new ArgumentException("points.Length == 0");
@@ -43,7 +43,7 @@ public static class MathUtils
             throw new ArgumentOutOfRangeException(nameof(freq));
 
         int first = 0;
-        int last = points.Count() - 1;
+        int last = points.Length - 1;
 
         //если искомая частота за пределами диапазона
         if (freq < points[first].X)
