@@ -45,13 +45,14 @@ public static class MathUtils
         int first = 0;
         int last = points.Length - 1;
 
-        //если искомая частота за пределами диапазона
+        //if freq is out of the range - take value of first(last) point
         if (freq < points[first].X)
             return new Point(freq, points[first].Y);
 
         if (freq > points[last].X)
             return new Point(freq, points[last].Y);
 
+        //kind of binary search
         int mid = 0;
         int prevMid = 0;
 
