@@ -37,11 +37,10 @@ public static class MathUtils
     public static Point GetApproxi(Point[] points, double freq)
     {
         if (points == null) throw new ArgumentNullException(nameof(points));
+        if (points.Length == 0) throw new ArgumentException("points.Length == 0");
 
         if (freq < 0 || double.IsNaN(freq) || double.IsInfinity(freq))
             throw new ArgumentOutOfRangeException(nameof(freq));
-
-        if (points.Length == 0) return default(Point);
 
         int first = 0;
         int last = points.Count() - 1;
