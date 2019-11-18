@@ -18,7 +18,7 @@ public static class MathUtils
         if (points.Length == 1) return true;
 
 
-        for(int i = 0; i < points.Length; i++)
+        for(int i = 0; i < points.Length - 1; i++)
         {
             if (points[i].X > points[i + 1].X) return false;
         }
