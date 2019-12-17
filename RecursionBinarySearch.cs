@@ -20,7 +20,7 @@ SOFTWARE.
 
 using System;
 
-public class RecursionBinarySearch
+public static class RecursionBinarySearch
 {
     public static int Search<T, R>(T[] array, R value, Func<T, R> selector) 
         where R : IComparable
